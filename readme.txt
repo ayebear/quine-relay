@@ -11,3 +11,4 @@ g++ Quine.cpp
 ./a.out > Quine.java
 javac Quine.java
 java Quine > Quine.c
+diff relay.c Quine.c
