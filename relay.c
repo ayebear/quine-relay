@@ -1,68 +1,68 @@
 #include <stdio.h>
-#define print_with_quotes(s) printf("%c%c%s%c,%c",9,34,s,34,10);
-
-void print_with_escape(const char* s)
-{
-	putchar(9);
-	putchar(34);
-	while (*s) {
-		if (*s == 34) {
-			putchar(92);
-		}
-		putchar(*s);
-		++s;
-	}
-	putchar(34);
-	putchar(44);
-	putchar(10);
-}
+char format_str[] = {9, 34, 37, 115, 34, 44, 10, 0};
 
 int main()
 {
 	unsigned i;
 	const char *data[] = {
+	"	",
+	"=============<<<<<<<< C Code >>>>>>>>=============",
 	"#include <stdio.h>",
-	"#define print_with_quotes(s) printf(\"%c%c%s%c,%c\",9,34,s,34,10);",
-	"",
-	"void print_with_escape(const char* s)",
-	"{",
-	"	putchar(9);",
-	"	putchar(34);",
-	"	while (*s) {",
-	"		if (*s == 34) {",
-	"			putchar(92);",
-	"		}",
-	"		putchar(*s);",
-	"		++s;",
-	"	}",
-	"	putchar(34);",
-	"	putchar(44);",
-	"	putchar(10);",
-	"}",
+	"char format_str[] = {9, 34, 37, 115, 34, 44, 10, 0};",
 	"",
 	"int main()",
 	"{",
 	"	unsigned i;",
 	"	const char *data[] = {",
-	"	NULL};",
-	"	for (i = 0; i < 23; ++i)",
+	"	};",
+	"	for (i = 19; i <= 26; ++i)",
 	"		puts(data[i]);",
-	"	print_with_quotes(data[0]);",
-	"	print_with_escape(data[1]);",
-	"	for (i = 2; data[i] != NULL; ++i)",
-	"		print_with_quotes(data[i]);",
-	"	for (i = 23; data[i] != NULL; ++i)",
+	"	for (i = 0; i <= 51; ++i)",
+	"		printf(format_str, data[i]);",
+	"	for (i = 27; i <= 35; ++i)",
 	"		puts(data[i]);",
 	"	return 0;",
 	"}",
-	NULL};
-	for (i = 0; i < 23; ++i)
+	"=============<<<<<<<< C++ Code >>>>>>>>=============",
+	"#include <iostream>",
+	"#include <string>",
+	"using namespace std;",
+	"",
+	"int main()",
+	"{",
+	"	char q = 34;",
+	"	string l[] = {",
+	"	};",
+	"	for (int i = 37; i <= 42; ++i)",
+	"		cout << l[i] << endl;",
+	"	for (int i = 0; i <= 51; ++i)",
+	"		cout << l[0] + l[0] + q + l[i] + q + ',' << endl;",
+	"	for (int i = 43; i <= 51; ++i)",
+	"		cout << l[i] << endl;",
+	"	return 0;",
+	"}",
+	"=============<<<<<<<< Java Code >>>>>>>>=============",
+	"public class Quine",
+	"{",
+	"	public static void main(String[] args)",
+	"	{",
+	"		char q = 34;",
+	"		String[] l = {",
+	"		};",
+	"		for (int i = 2; i <= 8; ++i)",
+	"			System.out.println(l[i]);",
+	"		for (int i = 0; i < l.length; ++i)",
+	"			System.out.println(l[0] + q + l[i] + q + ',');",
+	"		for (int i = 9; i <= 17; ++i)",
+	"			System.out.println(l[i]);",
+	"	}",
+	"}",
+	};
+	for (i = 19; i <= 26; ++i)
 		puts(data[i]);
-	print_with_quotes(data[0]);
-	print_with_escape(data[1]);
-	for (i = 2; data[i] != NULL; ++i)
-		print_with_quotes(data[i]);
-	for (i = 23; data[i] != NULL; ++i)
+	for (i = 0; i <= 51; ++i)
+		printf(format_str, data[i]);
+	for (i = 27; i <= 35; ++i)
 		puts(data[i]);
 	return 0;
 }
