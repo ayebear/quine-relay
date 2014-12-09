@@ -1,3 +1,5 @@
+Authors: Eric Hebert, Stuart Woodbury, Alex McCaslin
+
 We chose to make a Quine Relay.
 Derived from here: http://en.wikipedia.org/wiki/Quine_%28computing%29#Example
 
