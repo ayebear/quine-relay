@@ -10,5 +10,6 @@ gcc relay.c
 g++ Quine.cpp
 ./a.out > Quine.java
 javac Quine.java
-java Quine > Quine.c
+java Quine > Quine.py
+python Quine.py > Quine.c
 diff relay.c Quine.c
