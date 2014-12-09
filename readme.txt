@@ -1,7 +1,7 @@
 We chose to make a Quine Relay.
 Derived from here: http://en.wikipedia.org/wiki/Quine_%28computing%29#Example
 
-C -> C++ -> Java
+C -> C++ -> Java -> Python -> C
 
 Commands to run:
 
