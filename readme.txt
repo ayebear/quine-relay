@@ -1,8 +1,9 @@
 Authors: Eric Hebert, Stuart Woodbury, Alex McCaslin
 
-We chose to make a Quine Relay.
-Derived from here: http://en.wikipedia.org/wiki/Quine_%28computing%29#Example
+Derived from here: http://en.wikipedia.org/wiki/Quine_(computing)#Example
+"Quine (computing)." Wikipedia. Wikimedia Foundation, n.d. Web. 09 Dec. 2014.
 
+We made a Quine Relay of the following languages:
 C -> C++ -> Java -> Python -> C
 
 Commands to run:
